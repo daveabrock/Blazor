@@ -16,7 +16,12 @@ namespace Microsoft.AspNetCore.Blazor.Razor
 
         private readonly static string DesignTimeVariable = "__o";
 
-        public override void WriteUsingDirective(CodeRenderingContext context, UsingDirectiveIntermediateNode node)
+		public override void WriteHtmlElement(CodeRenderingContext context, HtmlElementIntermediateNode node)
+		{
+			throw new NotImplementedException();
+		}
+
+		public override void WriteUsingDirective(CodeRenderingContext context, UsingDirectiveIntermediateNode node)
         {
             if (context == null)
             {

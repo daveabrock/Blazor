@@ -37,7 +37,12 @@ namespace Microsoft.AspNetCore.Blazor.Razor
             public List<IntermediateToken> Values { get; set; }
         }
 
-        public override void WriteCSharpCode(CodeRenderingContext context, CSharpCodeIntermediateNode node)
+		public override void WriteHtmlElement(CodeRenderingContext context, HtmlElementIntermediateNode node)
+		{
+			throw new NotImplementedException();
+		}
+
+		public override void WriteCSharpCode(CodeRenderingContext context, CSharpCodeIntermediateNode node)
         {
             if (context == null)
             {
